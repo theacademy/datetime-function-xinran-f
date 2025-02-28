@@ -1,6 +1,7 @@
 package com.example;
 
 import java.time.*;
+import java.time.temporal.ChronoUnit;
 
 public class DateTimeFunctions {
 
@@ -48,7 +49,7 @@ public class DateTimeFunctions {
 	 */
 	public static LocalDate getPreviousDatebyWeeks(LocalDate date, int x) {
 		//YOUR CODE STARTS HERE
-		LocalDate previousDate = LocalDate.now().minusDays(x);
+		LocalDate previousDate = LocalDate.now().minusWeeks(x);
 
 		return previousDate;
 		//YOUR CODE ENDS HERE
