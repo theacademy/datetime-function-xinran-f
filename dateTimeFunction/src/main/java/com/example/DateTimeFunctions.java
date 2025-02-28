@@ -1,6 +1,7 @@
 package com.example;
 
 import java.time.*;
+import java.time.temporal.ChronoUnit;
 
 public class DateTimeFunctions {
 
@@ -22,7 +23,9 @@ public class DateTimeFunctions {
 	 */
 	public static LocalDate getTodaysDate() {
 		//YOUR CODE STARTS HERE
-		return null;
+		LocalDate today = LocalDate.now();
+
+		return today;
 		//YOUR CODE ENDS HERE
 
 	}
@@ -33,7 +36,9 @@ public class DateTimeFunctions {
 	 */
 	public static LocalDate getLaterDatebyDays(LocalDate date, int x) {
 		//YOUR CODE STARTS HERE
-		return null;
+		LocalDate laterDate = LocalDate.now().plusDays(x);
+
+		return laterDate;
 		//YOUR CODE ENDS HERE
 
 	}
@@ -44,7 +49,9 @@ public class DateTimeFunctions {
 	 */
 	public static LocalDate getPreviousDatebyWeeks(LocalDate date, int x) {
 		//YOUR CODE STARTS HERE
-		return null;
+		LocalDate previousDate = LocalDate.now().minusWeeks(x);
+
+		return previousDate;
 		//YOUR CODE ENDS HERE
 
 	}
@@ -56,7 +63,13 @@ public class DateTimeFunctions {
 	 */
 	public static String getTimeDifference(LocalDate date1, LocalDate date2) {
 		//YOUR CODE STARTS HERE
-		return null;
+		Period diff = date1.until(date2);
+		int dayDiff = diff.getDays();
+		int monthDiff = diff.getMonths();
+		int yearDiff = diff.getYears();
+		String diffFormatted = "Years-" + yearDiff + ":Months-" + monthDiff + ":Days-" + dayDiff;
+		
+		return diffFormatted;
 		//YOUR CODE ENDS HERE
 
 	}
