@@ -48,7 +48,9 @@ public class DateTimeFunctions {
 	 */
 	public static LocalDate getPreviousDatebyWeeks(LocalDate date, int x) {
 		//YOUR CODE STARTS HERE
-		return null;
+		LocalDate previousDate = LocalDate.now().minusDays(x);
+
+		return previousDate;
 		//YOUR CODE ENDS HERE
 
 	}
